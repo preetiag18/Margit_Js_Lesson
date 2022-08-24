@@ -1,0 +1,22 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ 
+label{
+    display: inline-block;
+    width: 100px;
+    margin: 10px 0;
+
+}
+
+button{
+    border:none;
+    background-color: brown;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    color:aliceblue;
+}
+input,button {
+    font-family: inherit;
+}
