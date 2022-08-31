@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://127.0.0.1:5500/week_4/insurance_calc/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Calc</title>
+    <link rel="stylesheet" href="./Insurance Calc_files/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Insurance Calc</h1>
+        <form>
+          <h2>What is your name:</h2>
+          <input type="text" placeholder="please enter your name" id="name">
+
+          <h2>What is your age:</h2>
+          <input type="number" placeholder="please enter your age" id="age">
+
+          <h2>Current Health:</h2>
+          
+          <div>
+            <input type="checkbox" id="hypertension" value="Hypertension">
+            <label for="hypertension">Hypertension</label>
+          </div>
+          <div>
+            <input type="checkbox" id="blood_sugar" value="Blood sugar">
+            <label for="topping2">Blood sugar</label>
+          </div>
+          <div>
+            <input type="checkbox" id="overweight" value="Overweight">
+            <label for="overweight">Overweight</label>
+            
+          <h2>Habits:</h2>
+          <div>
+            <input type="checkbox" id="smoking" value="Smoking">
+            <label for="smoking">Smoking</label>
+          </div>
+          <div>
+            <input type="checkbox" id="alcohol" value="Alcohol">
+            <label for="alcohol">Alcohol</label>
+          </div>
+          <div>
+            <input type="checkbox" id="daily_exercise" value="Daily exercise">
+            <label for="daily_exercise">Daily exercise</label>
+          </div>
+          <div>
+            <input type="checkbox" id="drugs" value="Drugs">
+            <label for="drugs">Drugs</label>
+          </div>
+          <button type="submit">Submit</button>
+        
+      </div></form>
+      <p id="health"></p>
+    </div>
+
+    <script src="./Insurance Calc_files/script.js"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></body></html>
