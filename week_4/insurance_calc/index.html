@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="hero-image"></div>
       <div class="content">
         <h1>Insurance Calc</h1>
         <form>
@@ -19,41 +20,61 @@
           <input type="number" placeholder="please enter your age" id="age" />
 
           <h2>Current Health:</h2>
-          
           <div>
-            <input type="checkbox" id="hypertension" value="Hypertension" />
+            <input
+              type="checkbox"
+              id="hypertension"
+              value="Hypertension"
+              name="currentHealth"
+            />
             <label for="hypertension">Hypertension</label>
           </div>
           <div>
-            <input type="checkbox" id="blood_sugar" value="Blood sugar" />
-            <label for="topping2">Blood sugar</label>
+            <input
+              type="checkbox"
+              id="blood_sugar"
+              value="Blood sugar"
+              name="currentHealth"
+            />
+            <label for="blood_sugar">Blood sugar</label>
           </div>
           <div>
-            <input type="checkbox" id="overweight" value="Overweight" />
+            <input
+              type="checkbox"
+              id="overweight"
+              value="Overweight"
+              name="currentHealth"
+            />
             <label for="overweight">Overweight</label>
-            
+          </div>
+
           <h2>Habits:</h2>
           <div>
-            <input type="checkbox" id="smoking" value="Smoking" />
+            <input type="checkbox" id="smoking" value="Smoking" name="habits" />
             <label for="smoking">Smoking</label>
           </div>
           <div>
-            <input type="checkbox" id="alcohol" value="Alcohol" />
+            <input type="checkbox" id="alcohol" value="Alcohol" name="habits" />
             <label for="alcohol">Alcohol</label>
           </div>
           <div>
-            <input type="checkbox" id="daily_exercise" value="Daily exercise" />
+            <input
+              type="checkbox"
+              id="daily_exercise"
+              value="Daily exercise"
+              name="habits"
+            />
             <label for="daily_exercise">Daily exercise</label>
           </div>
           <div>
-            <input type="checkbox" id="drugs" value="Drugs" />
+            <input type="checkbox" id="drugs" value="Drugs" name="habits" />
             <label for="drugs">Drugs</label>
           </div>
           <button type="submit">Submit</button>
         </form>
       </div>
-      <p id="health"></p>
     </div>
+    <h3 id="insuranceResult"></h3>
 
     <script src="script.js"></script>
   </body>
