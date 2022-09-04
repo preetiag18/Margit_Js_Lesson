@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0.5rem 0;
+    text-align: center;
+    padding: 10px;
+    background: #e96b12;;
+}
+
+.container{
+    display: flex;
+
+}
+.hero_image{
+    width: 35vw;
+    background: url("https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg")no-repeat fixed bottom center/cover;
+}
+
+form{
+    margin-left: 2rem;
+}
+h3{
+    margin-top: 1rem;
+}
+
+input {
+    margin-top: 0.4rem;
+}
+
+button{
+    color: white;
+    background-color: #e96b12;
+    border: 2px solid rgb(20, 15, 15);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+span{
+    color:#e96b12;;
+}
