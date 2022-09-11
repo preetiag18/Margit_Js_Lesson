@@ -25,6 +25,19 @@
           <input
             type="radio"
             name="arrows"
+            id="southEastArw"
+            value="to bottom right"
+            onclick="setGradient()"
+          />
+          <label for="southEastArw">
+            <span class="material-symbols-outlined">south_east</span>
+          </label>
+        </span>
+
+        <span>
+          <input
+            type="radio"
+            name="arrows"
             id="downArrow"
             value="to bottom"
             onclick="setGradient()"
@@ -52,12 +65,12 @@
           <input
             type="radio"
             name="arrows"
-            id="backArrow"
-            value="to left"
+            id="forwardArrow"
+            value="to right"
             onclick="setGradient()"
           />
-          <label for="backArrow">
-            <span class="material-symbols-outlined">arrow_back</span>
+          <label for="forwardArrow">
+            <span class="material-symbols-outlined">arrow_forward</span>
           </label>
         </span>
 
@@ -65,24 +78,11 @@
           <input
             type="radio"
             name="arrows"
-            id="northWestArw"
-            value="to top left"
-            onclick="setGradient()"
-          />
-          <label for="northWestArw">
-            <span class="material-symbols-outlined">north_west</span>
-          </label>
-        </span>
-
-        <span>
-          <input
-            type="radio"
-            name="arrows"
-            id="northWestArw"
+            id="hideArw"
             value=""
             onclick="setGradient()"
           />
-          <label for="northWestArw">
+          <label for="hideArw">
             <span class="material-symbols-outlined"></span>
           </label>
         </span>
@@ -91,12 +91,12 @@
           <input
             type="radio"
             name="arrows"
-            id="upArrow"
-            value="to top"
+            id="backArrow"
+            value="to left"
             onclick="setGradient()"
           />
-          <label for="upArrow">
-            <span class="material-symbols-outlined">arrow_upward </span>
+          <label for="backArrow">
+            <span class="material-symbols-outlined">arrow_back</span>
           </label>
         </span>
 
@@ -117,12 +117,12 @@
           <input
             type="radio"
             name="arrows"
-            id="forwardArrow"
-            value="to right"
+            id="upArrow"
+            value="to top"
             onclick="setGradient()"
           />
-          <label for="forwardArrow">
-            <span class="material-symbols-outlined">arrow_forward</span>
+          <label for="upArrow">
+            <span class="material-symbols-outlined">arrow_upward </span>
           </label>
         </span>
 
@@ -130,12 +130,12 @@
           <input
             type="radio"
             name="arrows"
-            id="southEastArw"
-            value="to bottom right"
+            id="northWestArw"
+            value="to top left"
             onclick="setGradient()"
           />
-          <label for="southEastArw">
-            <span class="material-symbols-outlined">south_east</span>
+          <label for="northWestArw">
+            <span class="material-symbols-outlined">north_west</span>
           </label>
         </span>
       </div>
