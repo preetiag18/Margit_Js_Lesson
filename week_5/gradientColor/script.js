@@ -12,16 +12,14 @@ function setGradient(event) {
 	body.style.background = 
 	"linear-gradient("
 	+ selectedArrow 
-	+ ","
+	+ ","      
 	+ color1.value 
 	+ ", "
 	+ color2.value 
 	+ ")";
 	h3.textContent = body.style.background + "";
 }
-
 //Pick and set Bkground colors 
-
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 

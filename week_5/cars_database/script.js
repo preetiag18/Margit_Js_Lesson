@@ -52,7 +52,7 @@ const prepareRows = (carData) => {
                     ${element.lNo}
                 </td>
                 <td>
-                    ${element.cMaker}
+                  ${element.cMaker}
                 </td>
                 <td>
                 ${element.cModel}

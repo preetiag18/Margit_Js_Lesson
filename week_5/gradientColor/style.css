@@ -24,8 +24,6 @@ h2{
 	margin-bottom: 1rem;
 }
 	
-	
-
 .gradient_container{
 	border:none;
 	background: azure;
@@ -52,9 +50,6 @@ input[type="color"]{
 input[type="radio"]{
 	visibility: hidden;
 }
-
-
-
 .radioBtns_container{
 	display: flex;
 	flex-wrap: wrap;
@@ -72,7 +67,6 @@ input[type="radio"]{
 /* .radioBtns_container span:nth-child(1), .radioBtns_container span:nth-child(4), .radioBtns_container span:nth-child(7){
 	margin-left: 2rem;
 } */
-
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
