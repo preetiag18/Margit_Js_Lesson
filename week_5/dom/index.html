@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><a href="#">Preeti Agrawal</a></h1>
+      </div>
+      <nav>
+        <button id="mob_button">
+          <span class="material-icons"> menu</span>
+        </button>
+        <ul>
+          <li><a href="#first">First</a></li>
+          <li><a href="#second">Second</a></li>
+          <li><a href="#third">Third</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="first">
+        <h2>First</h2>
+        <button class="btn">Don't click me</button>
+      </section>
+
+      <section id="second"><h2>Second</h2></section>
+      <section id="third"><h2>Third</h2></section>
+
+      <div class="overlay">
+        <div class="modal">
+          <h2>Modal</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            repellendus eos architecto, est aperiam, obcaecati tempora velit
+            vero atque nam soluta maiores nesciunt odio voluptatibus! Aliquid
+            placeat eaque explicabo ratione!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            repellendus eos architecto, est aperiam, obcaecati tempora velit
+            vero atque nam soluta maiores nesciunt odio voluptatibus! Aliquid
+            placeat eaque explicabo ratione!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            repellendus eos architecto, est aperiam, obcaecati tempora velit
+            vero atque nam soluta maiores nesciunt odio voluptatibus! Aliquid
+            placeat eaque explicabo ratione!
+          </p>
+          <button class="btn close">X</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contact">
+      <p>Copyright &copy 2022</p>
+      <button class="btn" id="back_to_top">Back to Top</button>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
