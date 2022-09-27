@@ -5,12 +5,13 @@
 
 }
 body{
-    font-family: 'Noto Sans',sans-serif;
-    background:url("https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/877295-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w3NzkwNzN8aW1hZ2UvanBlZ3xoNjgvaGUyLzEyMzcxNjgxMTE2MTkwLzg3NzI5NS0wMS5qcGdfMTIwMFd4MTIwMEh8MDNkMWQyOWUyYTUwZGZjZWNiNTM4NjFkY2FmM2EyMmQ3YTRjMTc4MTJlNDYxZDAyNDBhNWNjOWUwYTM1NzEyYQ") no-repeat center/cover;
+    font-family: 'Roboto', sans-serif;
+    background:url("https://us.123rf.com/450wm/bakhtiarzein/bakhtiarzein1601/bakhtiarzein160100059/51798549-woman-girls-play-tennis-badminton-racket-court-vector-illustration.jpg?ver=6") no-repeat center/cover;
     text-align: center;
     margin-top: 20vh;
-    color: rgb(20, 20, 25);
+    color: rgb(201, 52, 11);
     align-items: center;
+    cursor: url(racket.png) 2 2, pointer;;
    
    
     
@@ -21,10 +22,16 @@ h1{
 h3{
     margin-bottom: 2rem;
 }
+.play{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 #circle_container{
     display: flex;
-    margin-left: 22rem;
+    justify-content: center;
 }
 
 .circle{
@@ -36,10 +43,18 @@ h3{
      display: flex;
      align-items: center;
      justify-content: center;
-     
+     pointer-events: none;
+      
      
 }
-.active img{
+
+.active {
+    background-image: url(./shuttlecock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -49,6 +64,7 @@ h3{
 }
 
 button{
+    
     margin-top: 2rem;
     height: 3rem;
     width: 8rem;
@@ -56,4 +72,34 @@ button{
     color: black;
     background-color: aliceblue;
 
+}
+#start{
+    display: block;
+}
+
+#stop{
+    display: none;
+}
+
+#overlay{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    background-color: white;
+    padding: 2rem;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    position: relative;
 }

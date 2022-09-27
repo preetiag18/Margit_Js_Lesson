@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Open+Sans:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Open+Sans:wght@500&family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
 
@@ -14,26 +14,26 @@
   </head>
   <body>
     <main>
-      <h1>Eat Kajukatli</h1>
-      <section>
-      <h3>your score is:<span id="score"></span></h3>
-      <div id="circle_container">
-        <div class="circle active">
-        <img
-          src="https://media.istockphoto.com/photos/kaju-katli-also-known-as-kaju-barfi-is-an-indian-dessert-similar-to-a-picture-id1405183155?k=20&m=1405183155&s=612x612&w=0&h=EpTkHA0cazejM5q3TueFqAvc1A4zxsFRmUlqaJ_rccc="
-          alt="#"
-        />
-      </div>
-      <div class="circle">2</div>
-      <div class="circle">3</div>
-      <div class="circle">4</div>
-      <button type="submit" class="btn" id="start">Start Game</button>
-      <button type="submit" class="btn" id="stop">Stop Game</button>
- </section>
- <section>
-    <p>your score is</p>
- </section>
-</main>
+      <h1>Play Badminton</h1>
+      <section class="play">
+        <h3>your score is:<span id="score">0</span></h3>
+        <div id="circle_container">
+          <div class="circle" value="1"></div>
+          <div class="circle" value="2"></div>
+          <div class="circle" value="3"></div>
+          <div class="circle" value="4"></div>
+        </div>
+        <button type="submit" class="btn" id="start">Start Game</button>
+        <button type="submit" class="btn" id="stop">Stop Game</button>
+      </section>
+      <section id="overlay">
+        <div class="modal">
+          <p id="endResult"></p>
+          <p>oops...game over</p>
+          <button type="submit" id="close">close</button>
+        </div>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
