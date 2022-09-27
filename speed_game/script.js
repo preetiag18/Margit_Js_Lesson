@@ -10,26 +10,25 @@ let score = 0;
 let active = 0;
 let timer;
 let pace = 1000;
-let rounds = 0;
-let gameSound;
+let missedHits = 0;
+const playSmashSound = () => new Audio("media/smash.ogg").play();
+const gameOverSound = () => new Audio("media/game-over.mp3").play();
 // random number function from W3 page
 const RndNumber = (min, max)=> {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
 
-  circles.forEach((circle,i) =>{
+circles.forEach((circle,i) =>{
      circle.addEventListener("click", ()=>clickCircle(i))
-   
 });
 
-
 const clickCircle = (i)=>{
+    playSmashSound()
     if(i !== active){
         return stopGame();
-        }
-        else{
+    } else{
             score++;
-            rounds--;
+            missedHits--;
             return scoreShow.textContent = score;
         }
         
@@ -37,7 +36,7 @@ const clickCircle = (i)=>{
 
 
 const startGame = (e) => {
-    if(rounds >= 3){
+    if(missedHits >= 3){
         return stopGame();
     }
     for(let j=0;j<circles.length;j++){
@@ -57,7 +56,7 @@ const startGame = (e) => {
 
     pace = pace - 10;
 
-    rounds++;
+    missedHits++;
 
     function pickNewNo(active){
         let nextActive =  RndNumber(0,3); 
@@ -71,14 +70,15 @@ const startGame = (e) => {
 };
 
 const stopGame = (e) => {
+    gameOverSound();
     overlay.style.visibility = 'visible';
     stopButton.style.display = "none";
     startButton.style.display = "block";
     if(score < 10){
-        endResult.textContent = `Your Total Score is ${score} you can it try again`;
+        endResult.textContent = `Your Total Score is ${score}. You can it try again`;
     }
     else if(score >= 10 && score < 20 ){
-        endResult.textContent = `Your Total Score is ${score} you are good`;
+        endResult.textContent = `Well Done..!! Your Total Score is ${score}`;
     }
    
     clearTimeout(timer);
