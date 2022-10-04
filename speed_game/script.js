@@ -25,11 +25,11 @@ circles.forEach((circle,i) =>{
 const clickCircle = (i)=>{
     playSmashSound()
     if(i !== active){
-        return stopGame();
+        return stopGame("You missed to hit the shuttle");
     } else{
             score++;
             missedHits--;
-            return scoreShow.textContent = score;
+           return scoreShow.textContent = score;
         }
         
     };
@@ -37,7 +37,7 @@ const clickCircle = (i)=>{
 
 const startGame = (e) => {
     if(missedHits >= 3){
-        return stopGame();
+       return stopGame("You missed to hit 3 times.");
     }
     for(let j=0;j<circles.length;j++){
         circles[j].style.pointerEvents='auto';
@@ -51,7 +51,6 @@ const startGame = (e) => {
     startButton.style.display = "none"; 
 
     active = nextActive;
-    console.log('current active number is',active);
     timer = setTimeout(startGame,pace);
 
     pace = pace - 10;
@@ -69,13 +68,13 @@ const startGame = (e) => {
     }
 };
 
-const stopGame = (e) => {
+const stopGame = (message) => {
     gameOverSound();
     overlay.style.visibility = 'visible';
     stopButton.style.display = "none";
     startButton.style.display = "block";
     if(score < 10){
-        endResult.textContent = `Your Total Score is ${score}. You can it try again`;
+        endResult.textContent = `${message}. Your Total Score is ${score}. You can it try again`;
     }
     else if(score >= 10 && score < 20 ){
         endResult.textContent = `Well Done..!! Your Total Score is ${score}`;
@@ -83,13 +82,6 @@ const stopGame = (e) => {
    
     clearTimeout(timer);
   };
-
-//   for(const circle of circles){
-//     circle.addEventListener("click",()=>{
-//         console.log("I was Clicked",circle.textContent);
-//     })
-           
-//     }
 
 const resetGame = () =>{
     window.location.reload();
