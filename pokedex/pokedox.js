@@ -22,6 +22,15 @@ let pokemanSpecies = [];
 let z = [];
 const generationPokemonGet = (generationNumber) => {
   searchPokedox.innerHTML = "";
+  const i = document.createElement("input");
+  i.id = "search";
+  i.placeholder = "search pokemon by name";
+  i.type = "search";
+  i.addEventListener("input", (event) => {
+    searchPokemon(event.target.value);
+  });
+
+  searchPokedox.appendChild(i);
   z = [];
   const url = `https://pokeapi.co/api/v2/generation/${generationNumber}`;
   fetch(url)
@@ -54,16 +63,6 @@ const generationPokemonGet = (generationNumber) => {
       });
 
       Promise.all(listOfPokemonDetailsPromises).then((unUsedRes) => {
-        const i = document.createElement("input");
-        i.id = "search";
-        i.placeholder = "search pokemon by name";
-        i.type = "search";
-        i.addEventListener("input", (event) => {
-          searchPokemon(event.target.value);
-        });
-
-        searchPokedox.appendChild(i);
-
         let itemData = z.map((item) => {
           return getCard(item.number, item.types, item.name);
         });
