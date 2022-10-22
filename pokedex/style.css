@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: url("https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg") no-repeat center center fixed;
+    background: url("./assets/farm.jpg") no-repeat center center fixed;
 
 }
 
@@ -17,32 +17,29 @@ h1{
     justify-content:center;
     align-items: center;
     margin-bottom: 3rem;
-   
+    flex-wrap: wrap;
 }
 .btn{
     margin-right: 0.5rem;
     background: rgb(251, 200, 200);
-    width: auto;
+    width: 5rem;
     height: 2rem;
-    padding: 3px;
+    padding: 7px;
     border-radius: 5px;
-    border: 2px solid seagreen;
+    border: 2px solid black;
 }
-.buttons input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+input[type=search] {
+    width: 25vw;
+    padding: 10px;
+    font-size: 1.2rem;
   }
 
-#cards{
+.cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 3rem;
-    row-gap: 1rem;
+    gap: 2rem;
 }
 
 .card{
@@ -52,20 +49,59 @@ h1{
     border: #080908 2px solid;
     height: 15rem;
     width: 12rem;
-    background: aquamarine;
+    background: white;
 }
 .card:hover{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: perspective(300px) translateZ(50px);
+    
+}
+.card:hover .pokemonImage {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
 }
 
 span {
     margin-bottom: 1rem;
 }
 
-img{
+.pokemonImage{
     border-radius: 5px 5px 0 0;
-    height: 80%;
+    height: 70%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
+
+
 .container{
     padding-bottom: 3rem;
 }
+
+.typeIcon {
+    width: 15%;
+    height: 12%;
+}
+
+.searchPokedox{
+    text-align: center;
+}
+
+.pokemonCounts{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
